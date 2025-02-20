@@ -8,9 +8,6 @@
 /* Скидання стилів */
 /* Основні стилі */
 
-
-
-
 body {
     font-family: Literata;
     font-size: 100%;
@@ -20,7 +17,7 @@ body {
     flex-direction: column;
     background: #1a1c1f;
     color: #ffffff;
-    padding-inline:2rem ;
+    padding-inline: 2rem;
 }
 
 a {
@@ -36,7 +33,8 @@ a:hover {
     min-height: 100%;
     overflow: hidden;
 }
-h1, p{
+h1,
+p {
     margin-bottom: 1rem;
 }
 h1 {
@@ -59,6 +57,13 @@ ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 0.625rem;
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+    @media (max-width: 530px) {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        font-size: 1rem;
+    }
 }
 
 li {
@@ -67,15 +72,16 @@ li {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    background: linear-gradient(
-        rgba(151, 150, 150, 0.5),
-        rgba(8, 8, 8, 0.5)
-    );
+    background: linear-gradient(rgba(151, 150, 150, 0.5), rgba(8, 8, 8, 0.5));
     transition: all 0.2s;
 }
 li a {
     font-size: 1.5rem;
     margin-block: 1rem;
+    @media (max-width: 530px) {
+        font-size: 1rem;
+        margin-block: 0.7rem;
+    }
 }
 li p {
     font-size: 1rem;
@@ -86,9 +92,9 @@ li:hover {
     transition: all 0.2s;
     background-color: #d3a20028;
 }
-.task{
+.task {
     max-width: 400px;
     color: #db8514;
     max-height: 200px;
-    overflow:hidden;
+    overflow: hidden;
 }
