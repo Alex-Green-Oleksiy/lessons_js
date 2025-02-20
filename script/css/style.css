@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* Підключення фрифтів */
+/* Google Fonts (Plugin) */
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap");
+/* Локальне підключення шрифтів */
+@import url("reset.css");
+
+body {
+    font-family: Literata;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    background: #1a1c1f;
+    color: #ffffff;
+    padding-inline: 2rem;
+}
+
+h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    margin: 15px 25px;
+    padding: 5px;
+    text-align: center;
+    color: #eeaf04;
+}
+.lessons {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+li a {
+    overflow: hidden;
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f0940a;
+    transition: all 0.5s;
+    margin-block-end: 2rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #fd9c0b;
+}
+
+a:hover {
+    color: #005b96;
+    transition: all 0.5s;
+}
+span {
+    position: relative;
+}
