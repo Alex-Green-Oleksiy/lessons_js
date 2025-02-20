@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* Підключення фрифтів */
+/* Google Fonts (Plugin) */
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap");
+/* Локальне підключення шрифтів */
+@import url("reset.css");
+/* .... */
+/* Скидання стилів */
+/* Основні стилі */
+
+
+
+
+body {
+    font-family: Literata;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    background: #1a1c1f;
+    color: #ffffff;
+    padding-inline:2rem ;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+a:hover {
+    color: #6b0000;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+h1, p{
+    margin-bottom: 1rem;
+}
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0px auto 2rem auto;
+    color: #db8514;
+}
+h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0px auto 2rem auto;
+}
+
+ul {
+    margin: 0 auto;
+    max-width: 900px;
+    padding-inline: 0.625rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.625rem;
+}
+
+li {
+    margin-block: 0.625rem;
+    padding: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background: linear-gradient(
+        rgba(151, 150, 150, 0.5),
+        rgba(8, 8, 8, 0.5)
+    );
+    transition: all 0.2s;
+}
+li a {
+    font-size: 1.5rem;
+    margin-block: 1rem;
+}
+li p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+li:hover {
+    transform: scale(1.01);
+    transition: all 0.2s;
+    background-color: #d3a20028;
+}
+.task{
+    max-width: 400px;
+    color: #db8514;
+    max-height: 200px;
+    overflow:hidden;
+}
