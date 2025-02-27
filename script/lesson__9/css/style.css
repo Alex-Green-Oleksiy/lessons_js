@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* Підключення фрифтів */
+/* Google Fonts (Plugin) */
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap");
+/* Локальне підключення шрифтів */
+@import url("reset.css");
+/* .... */
+/* Скидання стилів */
+/* Основні стилі */
+
+body {
+    font-family: Literata;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    background: #1a1c1f;
+    color: #ffffff;
+    padding-inline: 2rem;
+}
+.pen {
+    /* background-color: #0d2d5e; */
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 1rem;
+    border: 1px solid #e98604;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+a:hover {
+    color: #ec9d09;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+h1,
+p {
+    margin: 0 auto 1rem auto;
+}
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0px auto 2rem auto;
+    color: #db8514;
+}
+
+ul {
+    margin: 0 auto;
+    max-width: 900px;
+    padding-inline: 0.625rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.625rem;
+    transition: all 1s;
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+    @media (max-width: 530px) {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        font-size: 1rem;
+    }
+}
+
+li {
+    margin-block: 0.625rem;
+    padding: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background: linear-gradient(rgba(151, 150, 150, 0.5), rgba(8, 8, 8, 0.5));
+    transition: all 1s;
+}
+li a {
+    font-size: 1.5rem;
+    margin-block: 1rem;
+    @media (max-width: 530px) {
+        font-size: 1rem;
+        margin-block: 0.7rem;
+    }
+}
+li p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+li:hover {
+    transform: scale(1.01);
+    transition: all 0.2s;
+    background-color: #d3a20028;
+}
+.task {
+    max-width: 400px;
+    color: #db8514;
+    transition: all 0.3s;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+.rest {
+    color: red;
+}
+.gilp {
+    color: #db8514;
+}
+table {
+    border-collapse: separate;
+    margin: 0 auto;
+    max-width: 100%;
+    padding-inline: 0.625rem;
+    transition: all 0.3s;
+}
+
+tr {
+    margin: 5px;
+    margin-block: 0.625rem;
+    padding: 0.625rem;
+    border-radius: 5px;
+    background: linear-gradient(rgba(151, 150, 150, 0.5), rgba(8, 8, 8, 0.5));
+    transition: all 0.3s;
+}
+td {
+    margin: 5px;
+    padding: 0.625rem;
+    border: 1px solid #db8514;
+    border-radius: 5px;
+    background: linear-gradient(rgba(151, 150, 150, 0.5), rgba(8, 8, 8, 0.5));
+    transition: all 0.3s;
+}
+
+.message:hover {
+    height: 200%;
+    color: #eb6104e0;
+}
+ol{max-width: 300px;
+margin: 0 auto;
+}
