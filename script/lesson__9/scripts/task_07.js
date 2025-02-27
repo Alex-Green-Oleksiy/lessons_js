@@ -5,14 +5,14 @@
 
 if (confirm("Почати тестування?")) {
     function applyDiscount(prices) {
-        const discountedPrices = Array.from(prices, (price) =>
-            price > 1000 ? price * 0.7 : price
-        );
-        return discountedPrices;
+        prices.forEach((el, ind, arr) => {
+            if (el > 1000) arr[ind] *= 0.7;
+        });
+        return prices;
     }
-    const pricesArray = [500, 1500, 2000, 750, 1200];
-    const discountedPrices = applyDiscount(pricesArray);
-
-    document.write(`Початковий масив цін: ${pricesArray}<br>`);
-    document.write(`Масив зі знижкою: ${discountedPrices}`);
+    let prices = [100, 90, 5000, 13000, 17, 16, 18];
+    
+    const discountedPrices1 = applyDiscount([...prices]);
+    document.write(`Початковий масив цін (приклад 1): ${prices}<br>`);
+    document.write(`Масив зі знижкою (приклад 1): ${discountedPrices1}<br>`);
 }
