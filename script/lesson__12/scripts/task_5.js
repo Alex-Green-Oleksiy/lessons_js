@@ -48,7 +48,8 @@ function isNameInNamesList(namesList, name = "Olga") {
     }
     return -1;
 }
-const searchName = prompt(`Введіть ім'я яке шукаєте :`, "");
+const searchName = prompt(`Введіть ім'я яке шукаєте :
+John,Maggy,Sarah,Olga,Jack,Mike,Tom`, "Olga");
 const isNameInArr = isNameInNamesList(namesList, searchName);
 if (isNameInArr !== -1)
     document.write(
