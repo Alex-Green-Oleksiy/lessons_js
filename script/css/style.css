@@ -27,7 +27,7 @@ h1 {
 }
 .lessons {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin: 0 auto;
 }
 li a {
