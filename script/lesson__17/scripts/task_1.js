@@ -25,8 +25,12 @@ class Test {
     }
 }
 
-let arr = [4, -5, -39, 3, -98, -45, 34, 23, 12, 89843, -5, 6, -5];
+let arr = [345, -789, 234, 567, -321, 432, -654, 876, -234, 987,
+    -543, 654, -876, 321, -432, 765, -987, 543, -345, 876,
+    -654, 234, -876, 765, -234, 321, -543, 9837, -765, 432,
+    -321, 876, -432, 543, -987, 654, -234, 345, -876, 765,
+    -543, 654, -321, 987, -654, 876, -432, 765, -987, 543];
 
 console.log(Test.countPositiveNumbers(arr));
 console.log(Test.countNegativeNumbers(arr));
-console.log(Test.countOccurrences(arr, -5));
+console.log(Test.countOccurrences(arr, -987));
