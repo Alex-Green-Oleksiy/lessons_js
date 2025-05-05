@@ -172,3 +172,9 @@ th {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
+.button19-3{
+    padding: 17px 45px;
+    background-color: #0000f17e;
+    margin: 25px auto;
+    display: block;
+}
