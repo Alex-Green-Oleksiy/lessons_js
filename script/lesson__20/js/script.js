@@ -75,7 +75,7 @@ class Star {
     }
 }
 
-for (let i = 0; i < 200; i++) {
+for (let i = 0; i < 300; i++) {
     const star = new Star(1, Math.random() * 10000 + 30000);
     star.render();
 }
