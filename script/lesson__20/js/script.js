@@ -82,8 +82,8 @@ for (let i = 0; i < 200; i++) {
 
 
 ///музика
-const audio = document.getElementById('bgMusic');
-const button = document.getElementById('toggleMusic');
+// const audio = document.getElementById('bgMusic');
+// const button = document.getElementById('toggleMusic');
 
 button.addEventListener('click', () => {
     if (audio.paused) {
