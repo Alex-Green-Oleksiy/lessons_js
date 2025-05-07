@@ -89,15 +89,10 @@ let isFirstPlay = true;
 
 button.addEventListener('click', () => {
     if (audio.paused) {
-        audio.play();
+        audio.play().catch(error => {
+            console.log('Error playing audio:', error);
+        });
         button.textContent = '🔊 Вимкнути звук';
-        // Якщо це перше відтворення, запускаємо звук автоматично
-        if (isFirstPlay) {
-            isFirstPlay = false;
-            audio.play().catch(error => {
-                console.log('Error playing audio:', error);
-            });
-        }
     } else {
         audio.pause();
         button.textContent = '🔇 Увімкнути звук';
