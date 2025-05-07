@@ -91,7 +91,7 @@ button.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
         button.textContent = '🔊 Вимкнути звук';
-        
+        // Якщо це перше відтворення, запускаємо звук автоматично
         if (isFirstPlay) {
             isFirstPlay = false;
             audio.play().catch(error => {
