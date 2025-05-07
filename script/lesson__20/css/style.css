@@ -1,0 +1,57 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffcc00);
+    background-size: 400% 400%;
+    animation: psychedelic 5s infinite alternate ease-in-out;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+.move{
+    width: 400px;
+    margin: 0   auto;
+    font-size: 25px;
+}
+p {
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+    opacity: 0.9;
+}
+.star {
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+}
+
+
+
+button {
+    background-color: #6b076b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@keyframes psychedelic {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}

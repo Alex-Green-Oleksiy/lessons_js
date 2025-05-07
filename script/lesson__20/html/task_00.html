@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 00</title>
+    <link href="../../style.css" rel="stylesheet">
+    <script defer src="./../scripts/task_00.js"></script>
+</head>
+<body>
+    <a href="../index.html">Home page</a>
+
+    <h1>Завдання 00</h1>
+    <p>
+        Динамічний пошук. Є список працівників і поле пошуку. При введенні відображаються усі, які містять вказаний фрагмент
+    </p>
+
+    <p>Відповідь</p>
+    <img src="../../img/img_11.png" alt="">
+
+    <div class="field-block">
+        <label for="search">
+            Введіть ім"я яке ви шукаєте
+            <input name="search" type="search" id="search">
+        </label>
+        <ul id="result"></ul>
+    </div>
+
+    <script>
+        if ( confirm('Почати тестування?') ) {
+            const fullNames = [
+                "Іваненко Олександр Миколайович",
+                "Петренко Марія Василівна",
+                "Шевченко Андрій Ігорович",
+                "Коваль Наталія Олексіївна",
+                "Бондар Олег Сергійович",
+                "Мельник Ірина Михайлівна",
+                "Ткаченко Дмитро Анатолійович",
+                "Кузьменко Ольга Петрівна",
+                "Литвин Юрій Володимирович",
+                "Сидоренко Анна Вікторівна",
+                "Гриценко Богдан Романович",
+                "Захарченко Катерина Юріївна",
+                "Романенко Артем Олександрович",
+                "Левченко Тетяна Валеріївна",
+                "Семенюк Владислав Ігорович",
+                "Назаренко Оксана Володимирівна",
+                "Гончаренко Максим Павлович",
+                "Дмитрук Аліна Сергіївна",
+                "Мазур Євген Олегович",
+                "Чорна Вікторія Андріївна"
+            ];
+
+            class SearchName {
+                constructor(arrName) {
+                    this.arrName = arrName
+                    this.result = []
+                    this.init()
+                }
+
+                init() {
+                    this.res = document.getElementById('result')
+                    this.arrName.map(el => this.result.push(el))
+                    this.render()
+                }
+
+                clear() {
+                    this.result = []
+                    this.res.innerHTML = ''
+                }
+
+                render() {
+                    for (let i = 0; i < this.result.length; i++) {
+                        let li = document.createElement('li')
+
+                        li.append(this.result[i])
+                        this.res.append(li)
+                    }
+                }
+
+                searchName() {
+                    this.clear()
+                    this.arrName.filter(el => {
+                        if (el.toLocaleLowerCase().includes(this.input.value.toLocaleLowerCase())) {
+                            this.result.push(el)
+                            new Set(this.result)
+                        }
+                    })
+
+                    this.render()
+                    this.emtyResult()
+                }
+
+                search() {
+                    let input = document.getElementById('search')
+                    this.input = input
+
+                    input.addEventListener('input', this.searchName.bind(this))
+                }
+
+                emtyResult() {
+                    if (!this.result.length) {
+                        this.res.innerText = 'Такого співробітника не має'
+                    }
+                }
+            }
+
+            const getName = new SearchName(fullNames)
+            getName.search()
+
+        }
+    </script>
+</body>
+</html>

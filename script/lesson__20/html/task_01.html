@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 01</title>
+    <link href="../../style.css" rel="stylesheet">
+    <script defer src="./../scripts/task_01.js"></script>
+</head>
+<body style="background-color: #25255b; overflow: hidden">
+    <a href="../index.html">Home page</a>
+
+    <h1>Завдання 1</h1>
+    <p>
+        Сяючі зорі. Вказана кількість зірочок повинна з’являтися у випадковій частині екрану.
+        Кожна зірка (це екземпляр класу Star) з певним кроком і інтервалом збільшується від мінімального до максимального розміру.
+        Як тільки досягнути максимального розміру зірочка повинна з’являтися у іншій випадковій позиції.
+    </p>
+
+    <p>Відповідь</p>
+
+
+    <script>
+        if (confirm('Почати тестування?')) {
+            class Star {
+                constructor(step, interval) {
+                    this.step = step;
+                    this.interval = interval;
+                    this.scale = 0.2;
+                    this.opacity = 1;
+                }
+
+                getRandomNum(max) {
+                    return Math.floor(Math.random() * max + 1);
+                }
+
+                setRandomPosition() {
+                    const posX = Math.random() * window.innerWidth;
+                    const posY = Math.random() * window.innerHeight;
+
+                    this.starEl.style.left = `${posX}px`;
+                    this.starEl.style.top = `${posY}px`;
+                }
+
+                starSize() {
+                    this.starEl.style.width = `${this.getRandomNum(10)}px`;
+                    this.starEl.style.height = `${this.starEl.style.width}px`;
+                }
+
+                starsUpdate() {
+                    this.scale += 0.2;
+                    this.opacity -= 0.1;
+
+                    if (this.scale >= this.step) {
+                        this.scale = 0.2;
+                        this.opacity = 1;
+                        this.starEl.style.transform = `scale(${this.scale})`;
+                        this.starEl.style.opacity = this.opacity;
+
+                        this.setRandomPosition();
+                    }
+
+                    this.starEl.style.transform = `scale(${this.scale})`;
+                    this.starEl.style.opacity = this.opacity;
+
+                }
+
+                render() {
+                    const starEl = document.createElement("div");
+                    this.starEl = starEl;
+
+                    starEl.classList.add("star");
+                    starEl.style.transform = `scale(${this.scale})`;
+                    starEl.style.opacity = this.opacity;
+                    document.querySelector('body').append(starEl);
+
+                    this.starSize();
+                    this.setRandomPosition();
+
+                    setInterval(() => {
+                        this.starsUpdate();
+                    }, this.getRandomNum(this.interval));
+                }
+            }
+
+            for(let i = 0; i < 200; i++) {
+                const star = new Star(2, 10000);
+                star.render();
+            }
+        }
+    </script>
+
+</body>
+</html>
