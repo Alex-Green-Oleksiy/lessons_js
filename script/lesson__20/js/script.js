@@ -90,7 +90,7 @@ let isFirstPlay = true;
 button.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
-        button.textContent = '🔊 Кляцни по мені';
+        button.textContent = '🔊 Вимкнути звук';
         
         if (isFirstPlay) {
             isFirstPlay = false;
