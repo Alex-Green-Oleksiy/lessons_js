@@ -81,7 +81,7 @@ for (let i = 0; i < 200; i++) {
 }
 
 
-
+///музика
 
 const audio = document.getElementById('bgMusic');
 const button = document.getElementById('toggleMusic');
@@ -90,8 +90,8 @@ let isFirstPlay = true;
 button.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
-        button.textContent = '🔊 Вимкнути звук';
-        // Якщо це перше відтворення, запускаємо звук автоматично
+        button.textContent = '🔊 Кляцни по мені';
+        
         if (isFirstPlay) {
             isFirstPlay = false;
             audio.play().catch(error => {
