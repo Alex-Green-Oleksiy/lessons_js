@@ -3,7 +3,15 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffcc00);
+    background: linear-gradient(
+        45deg,
+        #ff00ff,
+        #00ffff,
+        #ffcc00,
+        #060606,
+        #2706b8,
+        #f77d0b
+    );
     background-size: 400% 400%;
     animation: psychedelic 5s infinite alternate ease-in-out;
     text-align: center;
@@ -15,9 +23,9 @@ h1 {
     text-align: center;
     margin-top: 20px;
 }
-.move{
+.move {
     width: 400px;
-    margin: 0   auto;
+    margin: 0 auto;
     font-size: 25px;
 }
 p {
@@ -34,8 +42,6 @@ p {
     height: 6px;
     position: absolute;
 }
-
-
 
 button {
     background-color: #6b076b;
