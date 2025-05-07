@@ -85,11 +85,19 @@ for (let i = 0; i < 200; i++) {
 
 const audio = document.getElementById('bgMusic');
 const button = document.getElementById('toggleMusic');
+let isFirstPlay = true;
 
 button.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
         button.textContent = '🔊 Вимкнути звук';
+        // Якщо це перше відтворення, запускаємо звук автоматично
+        if (isFirstPlay) {
+            isFirstPlay = false;
+            audio.play().catch(error => {
+                console.log('Error playing audio:', error);
+            });
+        }
     } else {
         audio.pause();
         button.textContent = '🔇 Увімкнути звук';
