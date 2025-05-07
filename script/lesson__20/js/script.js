@@ -82,17 +82,17 @@ for (let i = 0; i < 200; i++) {
 
 
 ///музика
-
 const audio = document.getElementById('bgMusic');
 const button = document.getElementById('toggleMusic');
-let isFirstPlay = true;
 
 button.addEventListener('click', () => {
     if (audio.paused) {
-        audio.play().catch(error => {
+        audio.play().then(() => {
+            button.textContent = '🔊 Вимкнути звук';
+        }).catch(error => {
             console.log('Error playing audio:', error);
+            button.textContent = '🔇 Увімкнути звук';
         });
-        button.textContent = '🔊 Вимкнути звук';
     } else {
         audio.pause();
         button.textContent = '🔇 Увімкнути звук';
