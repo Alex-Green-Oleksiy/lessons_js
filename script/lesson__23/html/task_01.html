@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Кодування тексту -->
+        <meta charset="UTF-8" />
+        <!-- Налаштування в'юпорту (адаптиву, масштабу тощо) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Підключення окремого файлу стилів -->
+        <link rel="stylesheet" href="../css/style.css" />
+        <!-- Заголовок сторінки в браузері -->
+        <title>Lesson 23</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Manrope", sans-serif;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: background-color 0.3s ease;
+            }
+
+            .container {
+                text-align: center;
+                padding: 3rem;
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 0% 80% 80% 0%;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55),
+                    /* inset 0 -5px 10px rgba(0, 0, 0, 0.1), */ inset 350px 0px
+                        10px rgba(32, 30, 30, 0.3);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .container:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            }
+
+            h1 {
+                color: #2c3e50;
+                margin-bottom: 2.5rem;
+                font-size: 2rem;
+            }
+
+            .color-picker {
+                width: 220px;
+                height: 55px;
+                padding: 0.75rem;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .color-picker:hover {
+                transform: scale(1.05);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .counter {
+                font-size: 1.3rem;
+                color: #34495e;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 1rem;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            }
+
+            .count-value {
+                font-weight: bold;
+                color: #2c3e50;
+                font-size: 1.6rem;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            @media (max-width: 600px) {
+                .container {
+                    padding: 2rem;
+                }
+
+                .color-picker {
+                    width: 180px;
+                    height: 45px;
+                }
+
+                h1 {
+                    font-size: 1.75rem;
+                }
+
+                .counter {
+                    font-size: 1.2rem;
+                    padding: 0.8rem;
+                }
+
+                .count-value {
+                    font-size: 1.4rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Зміна кольору фону</h1>
+            <div class="controls">
+                <input type="color" id="color" class="color-picker" />
+                <div class="counter">
+                    <span>Кількість змін:</span>
+                    <span id="resultColor" class="count-value">0</span>
+                </div>
+            </div>
+        </div>
+        <script src="../scripts/task_1.js"></script>
+    </body>
+</html>

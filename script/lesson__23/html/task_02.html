@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Кодування тексту -->
+        <meta charset="UTF-8" />
+        <!-- Налаштування в'юпорту (адаптиву, масштабу тощо) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Підключення окремого файлу стилів -->
+        <link rel="stylesheet" href="../css/style.css" />
+        <!-- Заголовок сторінки в браузері -->
+        <title>Lesson 21</title>
+        <style>
+            .wrapper {
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2rem;
+                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            }
+
+            .container {
+                text-align: center;
+                padding: 3rem;
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
+                    inset 0 -5px 10px rgba(0, 0, 0, 0.05),
+                    inset 0 5px 15px rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .container:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15),
+                    inset 0 -10px 15px rgba(0, 0, 0, 0.1),
+                    inset 0 10px 20px rgba(255, 255, 255, 0.4);
+            }
+
+            .title {
+                color: #2c3e50;
+                margin-bottom: 1.5rem;
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+
+            .subtitle {
+                color: #34495e;
+                margin-top: 2rem;
+                font-size: 1.8rem;
+            }
+
+            p {
+                color: #34495e;
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+            }
+
+            hr {
+                margin: 2rem 0;
+                border: none;
+                height: 2px;
+                background: linear-gradient(
+                    to right,
+                    transparent,
+                    #3498db,
+                    transparent
+                );
+            }
+
+            .result-wrapper {
+                margin-top: 2rem;
+                padding: 1.5rem;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    padding: 2rem;
+                }
+
+                .title {
+                    font-size: 2rem;
+                }
+
+                .subtitle {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+            .task-list-container {
+                background: rgba(255, 255, 255, 0.95);
+                padding: 1.5rem;
+                border-radius: 10px;
+                box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            }
+
+            .task-list {
+                list-style: none;
+                padding: 0;
+                margin: 1rem 0;
+            }
+
+            .task-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.8rem;
+                margin: 0.5rem 0;
+                background: rgba(52, 73, 94, 0.05);
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+
+            .task-item:hover {
+                background: rgba(52, 73, 94, 0.1);
+                transform: translateX(5px);
+            }
+
+            .task-text {
+                color: #2c3e50;
+                font-size: 1.1rem;
+                flex: 1;
+            }
+
+            .task-complete-btn {
+                background: #27ae60;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .task-complete-btn:hover {
+                background: #219a50;
+                transform: scale(1.1);
+            }
+
+            .task-complete-btn:active {
+                transform: scale(0.9);
+            }
+        </style>
+    </head>
+    <body>
+        <main class="wrapper">
+            <div class="container">
+                <h1 class="title">Завдання №2</h1>
+                <p>
+                    Зберігати у пам’яті список справ, які користувачу треба
+                    виконати (зберігати у localStorage). Періодично випадковим
+                    чином вибирати якусь з справ і виводити користувачу (з
+                    використанням confirm). Якщо користувач натискає на «Ок», то
+                    видаляти цю задачу.
+                </p>
+                <hr />
+                <h2 class="subtitle">Рішення:</h2>
+                <div class="result-wrapper"></div>
+                <script src="../scripts/task_2.js"></script>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Кодування тексту -->
+        <meta charset="UTF-8" />
+        <!-- Налаштування в'юпорту (адаптиву, масштабу тощо) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Підключення окремого файлу стилів -->
+        <link rel="stylesheet" href="../css/style.css" />
+        <!-- Заголовок сторінки в браузері -->
+        <title>Lesson 23</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                background-color: #dd8705;
+                color: #333;
+            }
+
+            .container {
+                min-width: 600px;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #0b40d3;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 40px;
+                color: #f6f7f8;
+            }
+
+            .task {
+                background: white;
+                border-radius: 8px;
+                padding: 20px;
+                margin-bottom: 30px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            h2 {
+                color: #2c3e50;
+                margin-bottom: 15px;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 10px;
+            }
+
+            .input-group {
+                display: flex;
+                gap: 20px;
+                /* flex-wrap: wrap; */
+            }
+            .data {
+                background-color: #10d9e0;
+            }
+            .result {
+                background-color: #86e010;
+            }
+            .data,
+            .result {
+                border-radius: 8px;
+                padding: 15px;
+                border: 1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header"></header>
+        <div class="container">
+            <h1>Регулярні вирази</h1>
+
+            <!-- Завдання 1 -->
+            <div class="task">
+                <h2>Завдання 1: Рядки з цифрами</h2>
+                <div class="input-group">
+                    <div id="data1" class="data"></div>
+                    <div id="result1" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 2 -->
+            <div class="task">
+                <h2>Завдання 2: Рядки без цифр</h2>
+                <div class="input-group">
+                    <div id="data2" class="data"></div>
+                    <div id="result2" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 3 -->
+            <div class="task">
+                <h2>Завдання 3: Рядки з голосними літерами</h2>
+                <div class="input-group">
+                    <div id="data3" class="data"></div>
+                    <div id="result3" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 4 -->
+            <div class="task">
+                <h2>Завдання 4: Рядки без голосних літер</h2>
+                <div class="input-group">
+                    <div id="data4" class="data"></div>
+                    <div id="result4" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 5 -->
+            <div class="task">
+                <h2>Завдання 5: Рядки з цифрами 1 або 3</h2>
+                <div class="input-group">
+                    <div id="data5" class="data"></div>
+                    <div id="result5" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 6 -->
+            <div class="task">
+                <h2>Завдання 6: Числа з тексту</h2>
+                <div class="input-group">
+                    <div id="data6" class="data"></div>
+                    <div id="result6" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 7 -->
+            <div class="task">
+                <h2>Завдання 7: Пунктуаційні символи</h2>
+                <div class="input-group">
+                    <div id="data7" class="data"></div>
+                    <div id="result7" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 8 -->
+            <div class="task">
+                <h2>Завдання 8: Компоненти тексту</h2>
+                <div class="input-group">
+                    <div id="data8" class="data"></div>
+                    <div id="result8" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 9 -->
+            <div class="task">
+                <h2>Завдання 9: Дата</h2>
+                <div class="input-group">
+                    <div id="data9" class="data"></div>
+                    <div id="result9" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 10 -->
+            <div class="task">
+                <h2>Завдання 10: Двоцифрові числа</h2>
+                <div class="input-group">
+                    <div id="data10" class="data"></div>
+                    <div id="result10" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 11 -->
+            <div class="task">
+                <h2>Завдання 11: Номери карток</h2>
+                <div class="input-group">
+                    <div id="data11" class="data"></div>
+                    <div id="result11" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 12 -->
+            <div class="task">
+                <h2>Завдання 12: Урядовий сайт</h2>
+                <div class="input-group">
+                    <div id="data12" class="data"></div>
+                    <div id="result12" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 13 -->
+            <div class="task">
+                <h2>Завдання 13: Роки після 2021</h2>
+                <div class="input-group">
+                    <div id="data13" class="data"></div>
+                    <div id="result13" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 14 -->
+            <div class="task">
+                <h2>Завдання 14: Український телефон</h2>
+                <div class="input-group">
+                    <div id="data14" class="data"></div>
+                    <div id="result14" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 15 -->
+            <div class="task">
+                <h2>Завдання 15: Прізвище-ім'я</h2>
+                <div class="input-group">
+                    <div id="data15" class="data"></div>
+                    <div id="result15" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 16 -->
+            <div class="task">
+                <h2>Завдання 16: Формат дати</h2>
+                <div class="input-group">
+                    <div id="data16" class="data"></div>
+                    <div id="result16" class="result"></div>
+                </div>
+            </div>
+
+            <!-- Завдання 17 -->
+            <div class="task">
+                <h2>Завдання 17: Дні вихідних</h2>
+                <div class="input-group">
+                    <div id="data17" class="data"></div>
+                    <div id="result17" class="result"></div>
+                </div>
+            </div>
+        </div>
+        <script src="../scripts/task_3.js"></script>
+    </body>
+</html>
