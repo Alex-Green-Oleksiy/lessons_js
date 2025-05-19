@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* Підключення фрифтів */
+/* Google Fonts (Plugin) */
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap");
+/* Локальне підключення шрифтів */
+@import url("reset.css");
+/* .... */
+
+body {
+    font-family: Literata;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    /* background: #f18900; */
+    color: #ffffff;
+    padding-inline: 2rem;
+
+    background: linear-gradient(45deg, #f18900, #ffcc00, #bc9c0e, #f77d0b);
+    background-size: 400% 400%;
+    animation: psychedelic 3s infinite alternate ease-in-out;
+}
+h1 {
+    font-size: 3rem;
+    margin: 3rem auto;
+}
+.cards {
+    max-width: 90%;
+    margin: 0 auto;
+}
+.card {
+    font-size: 2rem;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+    border-block-end: 1px solid #000;
+    padding: 15px;
+}
+.card a {
+    border: 1px solid #000;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    color: #000;
+}
+.card a:hover {
+    background-color: #000;
+    color: #f18900;
+}
+
+@keyframes psychedelic {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+body .task {
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 5;
+    /* position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%); */
+}
+.task > p {
+    color: #f3f3ee;
+    text-align: center;
+}
+.task p a {
+    color: #920909;
+    font-weight: 700;
+}
