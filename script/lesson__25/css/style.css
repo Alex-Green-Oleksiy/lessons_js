@@ -20,9 +20,26 @@ body {
     background: linear-gradient(45deg, #f18900, #ffcc00, #bc9c0e, #f77d0b);
     background-size: 400% 400%;
     animation: psychedelic 3s infinite alternate ease-in-out;
+  
+    
 }
 
+.text-gradient {
+    background: linear-gradient(45deg, #21333e, #ffffff, #460646, #aa0160);
+    background-size: 400% 400%;
+    animation: textPsychedelic 3s infinite alternate ease-in-out;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
+@keyframes textPsychedelic {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
 h1 {
     font-size: 3rem;
     margin: 1rem auto;
