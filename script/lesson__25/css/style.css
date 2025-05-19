@@ -20,8 +20,6 @@ body {
     background: linear-gradient(45deg, #f18900, #ffcc00, #bc9c0e, #f77d0b);
     background-size: 400% 400%;
     animation: psychedelic 3s infinite alternate ease-in-out;
-  
-    
 }
 
 .text-gradient {
@@ -82,7 +80,6 @@ body .task {
     max-width: 600px;
     margin: 0 auto;
     z-index: 5;
- 
 }
 .task > p {
     color: #f3f3ee;
@@ -93,14 +90,14 @@ body .task {
     font-weight: 700;
 }
 @media (max-width: 768px) {
-    h1{
+    h1 {
         font-size: 17px;
         padding: 10px;
-      margin: 0 auto;
+        margin: 0 auto;
     }
     p {
-      font-size: 14px;
-      padding: 0;
-      margin: 0 auto;
+        font-size: 14px;
+        padding: 0;
+        margin: 0 auto;
     }
 }
