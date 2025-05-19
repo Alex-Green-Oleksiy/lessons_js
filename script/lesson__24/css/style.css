@@ -24,8 +24,8 @@ body {
         #bc9c0e,
         #f77d0b
     );
-    background-size: 400% 400%;
-    animation: psychedelic 7s infinite alternate ease-in-out;
+    /* background-size: 400% 400%; */
+    /* animation: psychedelic 7s infinite alternate ease-in-out; */
 }
 h1{
     font-size: 3rem;
