@@ -60,7 +60,7 @@ class ImageFetch {
         }
         this.intervalId = setInterval(() => {
             this.getImage();
-        }, 200);
+        }, 600);
     }
 
     stopAutoUpdate() {
