@@ -21,9 +21,11 @@ body {
     background-size: 400% 400%;
     animation: psychedelic 3s infinite alternate ease-in-out;
 }
+
+
 h1 {
     font-size: 3rem;
-    margin: 3rem auto;
+    margin: 1rem auto;
 }
 .cards {
     max-width: 90%;
@@ -63,10 +65,7 @@ body .task {
     max-width: 600px;
     margin: 0 auto;
     z-index: 5;
-    /* position: absolute;
-    left: 50%;
-    top: 0%;
-    transform: translateX(-50%); */
+ 
 }
 .task > p {
     color: #f3f3ee;
@@ -75,4 +74,16 @@ body .task {
 .task p a {
     color: #920909;
     font-weight: 700;
+}
+@media (max-width: 768px) {
+    h1{
+        font-size: 17px;
+        padding: 10px;
+      margin: 0 auto;
+    }
+    p {
+      font-size: 14px;
+      padding: 0;
+      margin: 0 auto;
+    }
 }
