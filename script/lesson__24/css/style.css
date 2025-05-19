@@ -13,9 +13,19 @@ body {
     font-size: 1.2rem;
     display: flex;
     flex-direction: column;
-    background: #f18900;
+    /* background: #f18900; */
     color: #ffffff;
     padding-inline: 2rem;
+
+    background: linear-gradient(
+        45deg,
+        #f18900,
+        #ffcc00,
+        #bc9c0e,
+        #f77d0b
+    );
+    background-size: 400% 400%;
+    animation: psychedelic 7s infinite alternate ease-in-out;
 }
 h1{
     font-size: 3rem;
@@ -177,4 +187,12 @@ th {
     background-color: #0000f17e;
     margin: 25px auto;
     display: block;
+}
+@keyframes psychedelic {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
